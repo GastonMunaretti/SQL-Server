@@ -1,0 +1,1 @@
+select distinct RECID , DATAAREAID from PURCHRFQLINE order by RECID asc

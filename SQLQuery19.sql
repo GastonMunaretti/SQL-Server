@@ -1,0 +1,4 @@
+Select * From PURCHTABLE A Where A.PURCHID = 'PC-003333'
+
+
+Select * From PURCHLINE A Where A.PURCHID = 'PC-003333'

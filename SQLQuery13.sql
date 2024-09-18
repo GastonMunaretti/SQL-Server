@@ -1,0 +1,5 @@
+Select distinct RECID from PURCHREQTABLE 
+
+Select RECID from PURCHREQTABLE 
+
+Select  RECID, PARTITION from INVENTDIM 

@@ -1,0 +1,27 @@
+CREATE FUNCTION [dbo].[MOD_SolicitudCompraCabecera_LOOKUP] (
+  @pCodigoSolicitudCompraCabecera  nvarchar (50) 
+)
+RETURNS int AS
+BEGIN
+  DECLARE @nSKEY INT
+
+  IF @pCodigoSolicitudCompraCabecera is null 
+  BEGIN
+    SET @nSKEY = -2
+  END
+  ELSE
+  BEGIN
+
+    SELECT @nSKEY = IdSolicitudCompraCabecera
+    FROM   MOD_SolicitudCompraCabecera
+    WHERE  CodigoSolicitudCompraCabecera = @pCodigoSolicitudCompraCabecera
+
+    IF @nSKEY IS NULL
+    BEGIN
+        SET @nSKEY = -1
+    END
+
+  END
+
+  RETURN @nSKEY
+END
